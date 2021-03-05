@@ -1,0 +1,107 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>你的的表白墙</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://2dph.com/DPH.png" media="screen"> 
+<meta name="keywords" content="七夕情人节表白情书,七夕情话,七夕表白网页">
+<meta name="description" content="我的心为你而跳，我的脚陪你走天涯海角，我的手拉着你幸福的走，我的眼看着你美丽永不回头，爱上了你，我很开心，愿意陪着你这样慢慢到老!">
+<link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{{ url_for('static',filename='js/js.js') }}"></script>
+<style type="text/css">
+    .abc{text-decoration:none}
+</style>
+</head>
+<body id="bgc">
+<script type="text/javascript" src="{{ url_for('static',filename='js/main.js') }}"></script>
+<div class="mb-box">
+<div class="bb">
+
+<h2>表白墙</h2>
+<div class="bb_text">
+<div id="code">
+我的心为你而跳，我的脚陪你走天涯海角，我的手拉着你幸福的走，我的眼看着你美丽永不回头，爱上了你，我很开心，愿意陪着你这样慢慢到老!
+</div></div>
+<div style="text-align:right;margin-bottom:6px;margin-right:10px;color:#ff6699;text-shadow:0 0 5px #6666cc">
+    爱你的:海登
+    </div>
+</div></div>
+<script>
+Element.prototype.typewriter=function(a){
+			var d = this,
+				c = d.innerHTML,
+				b = 0;
+			d.innerHTML="";
+			var e = setInterval(function() {
+				var f = c.substr(b, 1);
+				if (f == "<") {
+					b = c.indexOf(">", b) + 1
+				} else {
+					b++
+				}
+				d.innerHTML=c.substring(0, b) + (b & 1 ? "_" : "");
+				if (b >= c.length) {
+					clearInterval(e)
+				}
+			}, 150)
+		return this
+	
+	}
+document.getElementById("code").typewriter();
+</script>
+<!--
+<script>
+var myDate = new Date(); 
+var mytime=myDate.toLocaleDateString();
+</script>
+--><div style="display:none">
+<script type="text/javascript">
+    /*侧边栏*/
+    var cpro_id = "u2782220";
+</script>
+<script type="text/javascript" src="{{ url_for('static',filename='js/c.js') }}"></script>
+</div><div style="display:none">
+<script type="text/javascript">
+    /*677*250 创建于 Sun Oct 06 2017*/
+    var cpro_id = "u2782229";
+</script>
+<script type="text/javascript" src="{{ url_for('static',filename='js/c.js') }}"></script>
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static',filename='css/cuplayer.css') }}">
+				 <div style="position:absolute; top:50px; right:50px;">
+        <audio id="main_audio" autoplay="autoplay" preload="auto" loop>
+            <source src="http://m2.music.126.net/9gh32gywAIOO-GZCbZt9yA==/7856010581437857.mp3" type="audio/mpeg">
+        </audio>
+        <a class="c-white fs-12 icon-play rotate" id="btn-play" href="javascript:void(0);"></a>
+    </div>
+	
+    <script type="text/javascript">
+    //获取picid函数
+    $(function(){
+        $("area").click(function(){
+           var  picId=$(this).attr("data-id");
+           var picSrc="images/img_big/"+picId+".jpg"
+            $(".modal-content>.pic-box>img").attr("src",picSrc);
+        })
+        var isPlaying = function(audio) {return !audio.paused;}
+        var a = document.getElementById('main_audio');
+        if(!(a.play instanceof Function)){
+            a = document.getElementById('main_audio_ie8');
+            isPlaying = function(audio) {return audio.playState==2;}
+        }
+        $('#btn-play').on('click', function() {
+            if($(this).hasClass('rotate')) {
+                a.pause();
+                $(this).removeClass('rotate');
+            } else {
+                a.play();
+                $(this).addClass('rotate');
+            }
+        });
+
+    })
+    </script>
+</body>
+</html>
